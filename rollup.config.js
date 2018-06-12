@@ -1,5 +1,7 @@
 import babel from 'rollup-plugin-babel';
-export default {
+import pkg from './package.json';
+
+export default [{
     input: './src/index.js',
     output: {
         file: 'dist/bundle.js',
@@ -11,4 +13,9 @@ export default {
             exclude: 'node_modules/**'
         })
     ]
-};
+}, {
+    input: './src/index.js',
+    output: [
+        {file: pkg.main, format: 'cjs'}
+    ]
+}];

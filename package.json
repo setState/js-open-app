@@ -1,10 +1,11 @@
 {
   "name": "js-open-app",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "\"open local app js\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "rollup -c -w",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -15,16 +16,21 @@
     "app",
     "h5"
   ],
-  "author": "xiaowanzi",
+  "author": "xiaowanzi12",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yyxie/js-open-app/issues"
   },
+  "files": [
+    "index.js",
+    "dist"
+  ],
   "homepage": "https://github.com/yyxie/js-open-app#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-latest": "^6.24.1",
+    "rollup": "^0.60.2",
     "rollup-plugin-babel": "^3.0.4"
   }
 }
