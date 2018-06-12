@@ -114,7 +114,7 @@ const openApp = function (option) {
 };
 
 // 初始化
-const init = function (option) {
+const controlInit = function (option) {
     if (option.button) {
         option.button.setAttribute('href', 'javascript:void(0)');
         bind(option.button, 'click', function () {
@@ -133,4 +133,4 @@ const init = function (option) {
     }
 };
 
-exports.init = init;
+exports.controlInit = controlInit;

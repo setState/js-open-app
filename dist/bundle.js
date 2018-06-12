@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (factory((global.appControl = {})));
+    (factory((global.h5OpenAppControl = {})));
 }(this, (function (exports) { 'use strict';
 
     // 绑定事件
@@ -118,7 +118,7 @@
     };
 
     // 初始化
-    var init = function init(option) {
+    var controlInit = function controlInit(option) {
         if (option.button) {
             option.button.setAttribute('href', 'javascript:void(0)');
             bind(option.button, 'click', function () {
@@ -137,7 +137,7 @@
         }
     };
 
-    exports.init = init;
+    exports.controlInit = controlInit;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

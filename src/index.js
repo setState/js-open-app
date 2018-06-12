@@ -62,7 +62,7 @@ const openApp = function (option) {
 }
 
 // 初始化
-export const init = function (option) {
+export const controlInit = function (option) {
     if (option.button) {
         option.button.setAttribute('href', 'javascript:void(0)')
         bind(option.button, 'click', function () {

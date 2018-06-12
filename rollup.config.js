@@ -5,7 +5,7 @@ export default [{
     input: './src/index.js',
     output: {
         file: 'dist/bundle.js',
-        name: 'appControl',
+        name: 'h5OpenAppControl',
         format: 'umd'
     },
     plugins: [
