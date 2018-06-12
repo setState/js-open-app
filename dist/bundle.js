@@ -73,9 +73,7 @@
     var isIfr = false;
 
     // 打开APP
-    var openApp = function openApp(option, isAutoLaunchApp) {
-        alert(ifAndroid);
-        alert('安卓版本号' + androidVersion);
+    var openApp = function openApp(option) {
         var openLink = null,
             downloadUrl = null;
         if (ifIos) {
@@ -91,25 +89,17 @@
         openLink = formatUrl(openLink, params); //格式化url 加参数
         // android5 及以上的高版本&& androidVersion >= 5
         if (ifAndroid && androidVersion >= 5) {
-            alert('进入androidVersion >= 5');
-            // 如果为自动跳转直接用应用宝链接
-            if (isAutoLaunchApp) openLink = option.yybDownloadUrl || null;
-            setTimeout(function () {
-                // 必须要使用settimeout
-                var a = document.createElement("a"); //创建a元素
-                a.setAttribute("href", openLink), a.style.display = "none", a.setAttribute("id", "aTag"), document.body.appendChild(a);
-                document.getElementById('aTag').click();
-            }, 0);
+            var a = document.createElement("a"); //创建a元素
+            a.setAttribute("href", openLink), a.style.display = "none", a.setAttribute("id", "aTag"), document.body.appendChild(a);
+            document.getElementById('aTag').click();
         } else {
             window.location.href = downloadUrl;
         }
-        alert('打开地址：' + openLink);
-        alert('下载地址：' + downloadUrl);
         // 设备是ios
         if (ifIos) {
             // 如果是自动跳转或者未开启Universal Link 用之前的链接 否则用 Universal Link
-            var iosUniversalLinkEnabled = option.iosUniversalLinkEnabled || false ? false : true;
-            openLink = isAutoLaunchApp || iosUniversalLinkEnabled ? openLink : option.ios9Link || null;
+            // var iosUniversalLinkEnabled = (option.iosUniversalLinkEnabled || false) ? false : true
+            // openLink = isAutoLaunchApp || iosUniversalLinkEnabled ? openLink : (option.ios9Link || null);
 
             setTimeout(function () {
                 // 必须要使用settimeout
@@ -141,15 +131,9 @@
                     document.getElementById(iframe).style.height = "0px";
                     isIfr = true;
                 }
-                alert('openApp');
                 // 打开APP
-                openApp(option, false);
+                openApp(option);
             });
-        }
-        // 如果开启自动打开
-        if (option.autoLaunchApp) {
-            // 打开APP
-            openApp(option, true);
         }
     };
 
