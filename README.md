@@ -8,7 +8,7 @@ h5分享页面打开本地存在的app,
 ```
 npm: 通过npm引入然后直接调用controlInit({...参数...})完成跳转
 
-```javascript 
+```javascript
 import {controlInit} from 'nw-app-comic'
 
 ```
@@ -17,10 +17,10 @@ import {controlInit} from 'nw-app-comic'
 | `button` | `dom` | `按钮` |
 | `androidLink` | `string` | `安卓的打开链接` |
 | `androidDownloadUrl` | `string` | `安卓的下载链接,开启应用宝的时候这个配置没有用` |
-| `androidYyb| `Boolean` | ` android 是否开启应用宝下载` |
+| `androidYyb` | `Boolean` | ` android 是否开启应用宝下载` |
 | `iosLink` | `string` | `ios 打开链接` |
 | `iosDownloadUrl` | `string` | `ios 的下载链接` |
-| `iosUniversalLinkEnabled| `Boolean` | `是否开启 Universal Link` |
-| `iosYyb| `Boolean` | `ios 是否开启应用宝下载` |
+| `iosUniversalLinkEnabled` | `Boolean` | `是否开启 Universal Link` |
+| `iosYyb` | `Boolean` | `ios 是否开启应用宝下载` |
 | `yybDownloadUrl` | `string` | `应用宝下载链接` |
-| `autoRedirectToDownloadUrl| `Boolean` | `是否如果没有打开app则自动跳转到下载页面` |
+| `autoRedirectToDownloadUrl` | `Boolean` | `是否如果没有打开app则自动跳转到下载页面` |
