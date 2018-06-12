@@ -1,6 +1,6 @@
 {
   "name": "js-open-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "\"open local app js\"",
   "main": "index.js",
   "scripts": {
