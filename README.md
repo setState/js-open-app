@@ -9,7 +9,7 @@ h5分享页面打开本地存在的app,
 npm: 通过npm引入然后直接调用controlInit({...参数...})完成跳转
 
 ```javascript
-import {controlInit} from 'nw-app-comic'
+import {controlInit} from 'js-open-app'
 
 ```
 | 参数属性 | 类型 | 描述 |
